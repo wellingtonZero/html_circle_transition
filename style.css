@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #2c3e50;
+    color: #fff;
+    font-family: 'Open Sans',Arial;
+}
+
+.header h1{
+    font-size: 32px;
+    text-align: center;
+    padding: 20px 0;
+}
+.header h2{
+    font-size: 20px;
+    text-align:center;
+}
+
+.circulo{
+    list-style: none;
+    text-align: center;
+}
+
+.circulo li{
+    width: 220px;
+    height: 220px;
+    display: inline-block;
+    margin: 20px;
+}
+
+
+
+.circulo li:nth-child(1) .circulo-item{
+    background: url(images/gato.jpg);
+}
+
+.circulo li:nth-child(2) .circulo-item{
+    background: url(images/dragao.png);
+}
+
+.circulo li:nth-child(3) .circulo-item{
+    background: url(images/guitarra.jpg);
+}
+
+.circulo-item{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 16px rgba(255,255,255,.6);
+    position: relative;
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+}
+
+.circulo-info{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    background: rgba(63, 147, 147, .9);
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    opacity: 0;
+}
+
+.circulo-info h2{
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: 30px 30px;
+    padding-top: 45px 0 0 0;
+}
+
+.circulo-info p{
+    font-size: 14px;
+    font-style: italic;
+    border-top: 1px solid #eee;
+    padding: 10px 5px;
+    margin: 0 30px;
+    opacity: 0;
+    transition: all 1s ease-in-out 0.4s;
+    -webkit-transition: all 1s ease-in-out 0.4;
+}
+
+.circulo-info p a{
+    color: #eee;
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+
+.circulo-info p a:hover{
+    color: #fff222;
+    
+}
+
+.circulo-item:hover{
+    box-shadow: inset 0 0 0 0 rgba(255, 255, 255, .6);
+}
+
+.circulo-item:hover .circulo-info{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    opacity: 1;
+}
+
+.circulo-item:hover .circulo-info p{
+    opacity: 1;
+}
